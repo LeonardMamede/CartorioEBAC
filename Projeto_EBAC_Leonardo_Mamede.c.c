@@ -11,6 +11,7 @@ int registro ()
     char nome[40];
     char sobrenome[40];
     char cargo[40];
+    char email [100];
 
     printf("Digite o seu CPF: ");
     scanf("%s", cpf);
@@ -55,6 +56,12 @@ int registro ()
     fprintf(file,cargo);
     fclose(file);
 
+    printf("Qual é seu e-mail? ");
+    scanf("%s",email);
+
+    file = fopen (arquivo, "a");
+    fprintf(file,email);
+    fclose(file);
     system("pause");
 
 }
